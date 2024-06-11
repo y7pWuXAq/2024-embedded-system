@@ -1,4 +1,4 @@
-## embedded-system-2024
+## 2024-embedded-system
 IoT 개발자과정 임베디드시스템 학습 리포지토리
 
 
