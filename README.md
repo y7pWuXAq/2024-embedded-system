@@ -1,7 +1,9 @@
-# embedded-system-2024
-부경대 2024 IoT 개발자과정 임베디드시스템 학습 리포지토리
+## embedded-system-2024
+IoT 개발자과정 임베디드시스템 학습 리포지토리
 
-## 1일차
+
+
+### DAY 01
 
 - 개발환경 설치
 	- 라즈베리파이 설치 : https://www.raspberrypi.com/software/
@@ -44,47 +46,58 @@
 		- linenumbers
 		- tabsize 8 -> tabsize 2
 
-## 2일차
+
+
+### DAY 02
+
 
 		
-## 3일차
+### DAY 03
 - list 예제
 	- 전위 삽입 : test19.list03.c
 	```C
-9 void pre_addNode(node* pnode, int pdata)  // 전위삽입 : 새로 만든 node가 head와 연>
-10 {
-11   node* newNode = (node*)malloc(sizeof(node));
-12   newNode->data = pdata;
-13   newNode->next = pnode->next;
-14   pnode->next = newNode;
-15 }
+		void pre_addNode(node* pnode, int pdata)  // 전위삽입 : 새로 만든 node가 head와 연>
+		{
+			node* newNode = (node*)malloc(sizeof(node));
+			newNode->data = pdata;
+			newNode->next = pnode->next;
+			pnode->next = newNode;
+		}
 
 	```
+
 	- 후위 삽입 : test19.list03.c
+
 	```C
-void rear_addNode(node* pnode, int pdata) // 후위삽입 : 새로 만든 node가 마지막 no>
-18 {
-19   node* newNode = (node*)malloc(sizeof(node));
-20   newNode->data = pdata;
-21   newNode->next = NULL;
-22
-23   while(pnode->next != NULL)
-24   {
-25     pnode = pnode->next;
-26   }
-27
-28   pnode->next = newNode;
-29 }
+		void rear_addNode(node* pnode, int pdata) // 후위삽입 : 새로 만든 node가 마지막 no>
+		{
+		   node* newNode = (node*)malloc(sizeof(node));
+		   newNode->data = pdata;
+		   newNode->next = NULL;
+		
+		   while(pnode->next != NULL)
+		   {
+		     pnode = pnode->next;
+		   }
+		
+		   pnode->next = newNode;
+		}
 
 	```
-	
-## 4일차
+
+
+
+### DAY 04
+
 - 전체 메모리 해제 함수 : test20_list04.c
 - head 노드를 만드는 함수 
 	- test20_list04_v2.c (형변환 사용) #주석 안적음 주석 적어야 함!	
 	- test20_list04_v3.c 형변환 사용 안하고 함수 수정
-	
-## 5일차
+
+
+
+### DAY 05
+
 - sudo apt update
 - sudo apt upgrade
 - 노드 검색 함수 ./day05/test20_list04_v4.c > 30줄 에러남 못고침
@@ -93,8 +106,11 @@ void rear_addNode(node* pnode, int pdata) // 후위삽입 : 새로 만든 node�
 	- test22_stack02.c
 - queue : test23_queue01.c
 	- 선입선출 : FIFO 구조
-	
-## 6일차
+
+
+
+### DAY 06
+
 - make : 프로그램 빌드 도구  
    &rarr; makefile 생성 후 make 컴파일 -> 실행은 ./
 
@@ -105,20 +121,33 @@ void rear_addNode(node* pnode, int pdata) // 후위삽입 : 새로 만든 node�
    &rarr; 수정된 소스파일만 컴파일 -> 재컴파일 시간 단축
    
    ```C
-   makefile
-   test: main.o inputf.o printf.o
-      gcc -o test main.c printf.c inputf.c
+		makefile
+		test: main.o inputf.o printf.o
+			gcc -o test main.c printf.c inputf.c
 
-   main.o: main.c
-      gcc -c main.c
+		main.o: main.c
+			gcc -c main.c
 
-   inputf.o: inputf.c
-      gcc -c inputf.c
+		inputf.o: inputf.c
+			gcc -c inputf.c
 
-   printf.o: printf.c
-      gcc -c printf.c
+		printf.o: printf.c
+			gcc -c printf.c
    ```
+
  - 연결 자료 구조를 이용한 queue
 	- /day06/test26_queue03.c
 	
 - 파일분할 (Queue 폴더)
+
+
+
+### DAY 07
+
+
+
+### DAY 08
+
+
+
+### 미니프로젝트
